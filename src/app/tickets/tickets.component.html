@@ -1,0 +1,8 @@
+<div class="row" *ngFor="let ticket of tickets.results">
+    <div class="col">
+        <app-accordion 
+        [ticket]="ticket"
+        (cancelTicket)="onCancelTicket($event)"
+        ></app-accordion>
+    </div>
+</div>

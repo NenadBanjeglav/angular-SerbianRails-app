@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <p>Station list for train: {{train.number}} </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Station</th>
+                    <th scope="col">Arrival</th>
+                    <th scope="col">Departure</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let station of train.stations">
+                    <td>{{station.name}}</td>
+                    <td>{{station.arrival}}</td>
+                    <td>{{station.departure}}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <a [routerLink]="['/buy', train._id]"><button type="button" class="btn btn-danger">Buy Ticket</button></a>
+        </div>
+    </div>
+</div>
+
